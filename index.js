@@ -29,6 +29,7 @@ module.exports = function(homebridge){
 function MQTT_HSB(log, config) {
     //create instance for one stripe to store state
     log("Config: " + config);
+    log("homebridge-mqtt-hsb-light version 2.1")
     var me = this;
     
     this.stripe = require("./mqtt-hsblight-mod")(log, config, function(data) {
