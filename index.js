@@ -39,7 +39,7 @@ function MQTT_HSB(log, config) {
             me.lightbulbService.getCharacteristic(Characteristic.Saturation).setValue(data.saturation, undefined, 'myListener');
             me.lightbulbService.getCharacteristic(Characteristic.Brightness).setValue(data.brightness, undefined, 'myListener');
         }
-        log("listerner: state changed " + data)
+        log("listener: state changed " + JSON.stringify(data))
     });
 
     this.log = log;
