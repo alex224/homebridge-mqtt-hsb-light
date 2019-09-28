@@ -28,7 +28,7 @@ module.exports = function (log, config, stateChangedListener) {
 	});
 
 	client.on('message', function (topic, message) {
-		module.log("Received message from mqtt broker for topic: " + topic + ": " + message);
+		module.log("Received message on topic: " + topic + ": " + message);
 		var stateTopic = getParam(log, config, 'topics.stateAnswer', true, null);
 		if (topic == stateTopic) {
 			try {

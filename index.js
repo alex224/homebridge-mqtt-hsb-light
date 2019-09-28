@@ -125,6 +125,7 @@ MQTT_HSB.prototype = {
     setPowerState: function(state, callback, origin) {
         if (origin == 'myListener') {
             callback(undefined, state);
+            return;
         }
         var me = this;
         this.log('... setting powerState to ' + state);
@@ -152,6 +153,7 @@ MQTT_HSB.prototype = {
     setBrightness: function(level, callback, origin) {
         if (origin == 'myListener') {
             callback(undefined, level);
+            return;
         }
         var me = this;
         this.log('... setting brightness to ' + level);
@@ -179,6 +181,7 @@ MQTT_HSB.prototype = {
     setHue: function(level, callback, origin) {
         if (origin == 'myListener') {
             callback(undefined, level);
+            return;
         }
         var me = this;
         this.log('... setting hue to ' + level);
@@ -206,6 +209,7 @@ MQTT_HSB.prototype = {
     setSaturation: function(level, callback, origin) {
         if (origin == 'myListener') {
             callback(undefined, level);
+            return;
         }
         var me = this;
         this.log('... setting saturation to ' + level);
